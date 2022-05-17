@@ -1,0 +1,31 @@
+.container {
+    border: 1px solid;
+    color: white;
+    background-color: #a058a7;
+    border-radius: 5px;
+    width: 25vw;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    
+        &:hover {
+            transform: translate(10px, -10px);
+            transition: all .3s ease-out;
+        }
+    
+    p {
+        margin: 0;
+        justify-self: start;
+    }
+    img {
+        margin: 3px;
+    }
+    button {
+        border: none;
+        background-color: cornflowerblue;
+        border-radius: 3px;
+    }
+}

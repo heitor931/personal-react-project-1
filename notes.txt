@@ -1,0 +1,5 @@
+Project objetives:
+
+1-  Create a list of miscellaneous objects with images.
+2- Add search functionality.
+3- Work with git Hub, publish the project in the end in github
