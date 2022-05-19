@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import Cardlist from "./components/cardlist/Cardlist";
+import SearchBox from "./components/searchBox/SearchBox";
 
 export class App extends Component {
   constructor() {
@@ -62,6 +63,8 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Everything in the universe...</h1>
+        <SearchBox />
         <Cardlist data={this.state.objects} />
         <h1>Paz</h1>
       </div>
