@@ -1,12 +1,12 @@
-Project objetives:
+Project objectives:
 
 17/May
 
 1-  Create a list of miscellaneous objects with images.=> Done
-2- Add search functionality.
-3- Work with git Hub, publish the project in the end in github => Done
+2- Work with git Hub => Done 
+3- Add search functionality.- Ongoing...
+4-publish the project in the end in github
 
 Next...
 1- Make the whole card clickable
 2. Adjust background to focus clicked
-3. Add search component and functionality

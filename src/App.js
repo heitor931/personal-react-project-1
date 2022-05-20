@@ -60,11 +60,18 @@ export class App extends Component {
       ],
     };
   }
+    handleChange = e => {
+      console.log(e.target.value)
+      const filteredObjects = this.state.objects.filter(obj => obj.name.toUpperCase().includes(e.target.value.toUpperCase()))
+      this.setState({objects: filteredObjects})
+
+    }
+
   render() {
     return (
       <div className="App">
         <h1>Everything in the universe...</h1>
-        <SearchBox />
+        <SearchBox things={this.state.objects} handleChange={this.handleChange} />
         <Cardlist data={this.state.objects} />
         <h1>Paz</h1>
       </div>
