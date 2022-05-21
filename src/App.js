@@ -65,13 +65,14 @@ export class App extends Component {
   componentDidMount() {
     this.setState({filteredObjects: this.state.objects})
   }
-  
+
   handleChange = (e) => {
     const filteredObject = this.state.objects.filter((obj) =>
       obj.name.toUpperCase().includes(e.target.value.toUpperCase())
     );
     this.setState({ filteredObjects: filteredObject });
   };
+
 
   render() {
     return (
