@@ -58,21 +58,27 @@ export class App extends Component {
           src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=975&q=80",
         },
       ],
+      filteredObjects: [],
     };
   }
-    handleChange = e => {
-      console.log(e.target.value)
-      const filteredObjects = this.state.objects.filter(obj => obj.name.toUpperCase().includes(e.target.value.toUpperCase()))
-      this.setState({objects: filteredObjects})
 
-    }
+  componentDidMount() {
+    this.setState({filteredObjects: this.state.objects})
+  }
+  
+  handleChange = (e) => {
+    const filteredObject = this.state.objects.filter((obj) =>
+      obj.name.toUpperCase().includes(e.target.value.toUpperCase())
+    );
+    this.setState({ filteredObjects: filteredObject });
+  };
 
   render() {
     return (
       <div className="App">
         <h1>Everything in the universe...</h1>
-        <SearchBox things={this.state.objects} handleChange={this.handleChange} />
-        <Cardlist data={this.state.objects} />
+        <SearchBox handleChange={this.handleChange} />
+        <Cardlist data={this.state.filteredObjects} />
         <h1>Paz</h1>
       </div>
     );
